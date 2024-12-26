@@ -1,0 +1,20 @@
+To resolve this issue, there are multiple ways to prioritize the styling of the outer element. One effective method is to increase the specificity of the outer element's selector or add !important to the declaration:
+```css
+#outer {
+  background-color: lightblue !important; 
+}
+
+.inner {
+  background-color: lightcoral;
+}
+```
+Another approach would be to use a more specific class or ID for the outer div. You can also use the :not pseudo-class to prevent the inner div from affecting the background.
+```css
+#outer:not(.inner) {
+  background-color: lightblue;
+}
+.inner {
+  background-color: lightcoral;
+}
+```
+The selection of the most appropriate solution will depend on the specific context of your stylesheet and overall design.
