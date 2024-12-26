@@ -1,0 +1,16 @@
+The following CSS code snippet demonstrates an issue where the specificity of selectors can lead to unexpected behavior. The class ".inner" is unintentionally overriding the styles defined for the id "#outer".  This is because ID selectors have higher specificity than class selectors. 
+```css
+#outer {
+  background-color: lightblue;
+}
+
+.inner {
+  background-color: lightcoral;
+}
+```
+
+```html
+<div id="outer">
+  <div class="inner"></div>
+</div>
+```
